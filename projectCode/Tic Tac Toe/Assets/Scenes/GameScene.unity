@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 11420936}
   - component: {fileID: 11420935}
+  - component: {fileID: 11420937}
   m_Layer: 0
   m_Name: board
   m_TagString: Untagged
@@ -214,6 +215,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11420937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11420934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d21b87da91e7e0347a1dc2a44a4b6e5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boxesLayerMask:
+    serializedVersion: 2
+    m_Bits: 256
+  touchRadius: 0.2
+  spriteX: {fileID: 21300000, guid: 5f670ba415a10394992e3dfc93898440, type: 3}
+  spriteO: {fileID: 21300000, guid: 2b1c5b8849174f344895eacd77516cf0, type: 3}
+  colorX: {r: 1, g: 0, b: 0.9955864, a: 1}
+  colorO: {r: 0, g: 1, b: 0.97256804, a: 1}
+  marks: 
 --- !u!1 &75584176
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,7 +248,7 @@ GameObject:
   - component: {fileID: 75584179}
   - component: {fileID: 75584178}
   - component: {fileID: 75584180}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -341,7 +363,7 @@ GameObject:
   - component: {fileID: 304266544}
   - component: {fileID: 304266543}
   - component: {fileID: 304266545}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -539,7 +561,7 @@ GameObject:
   - component: {fileID: 545174038}
   - component: {fileID: 545174037}
   - component: {fileID: 545174039}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -654,7 +676,7 @@ GameObject:
   - component: {fileID: 1065317771}
   - component: {fileID: 1065317770}
   - component: {fileID: 1065317772}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -769,7 +791,7 @@ GameObject:
   - component: {fileID: 1171673022}
   - component: {fileID: 1171673021}
   - component: {fileID: 1171673023}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -884,7 +906,7 @@ GameObject:
   - component: {fileID: 1319991289}
   - component: {fileID: 1319991288}
   - component: {fileID: 1319991290}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -999,7 +1021,7 @@ GameObject:
   - component: {fileID: 1742443061}
   - component: {fileID: 1742443060}
   - component: {fileID: 1742443062}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1114,7 +1136,7 @@ GameObject:
   - component: {fileID: 2047387111}
   - component: {fileID: 2047387110}
   - component: {fileID: 2047387112}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1229,7 +1251,7 @@ GameObject:
   - component: {fileID: 2136102436}
   - component: {fileID: 2136102435}
   - component: {fileID: 2136102437}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}

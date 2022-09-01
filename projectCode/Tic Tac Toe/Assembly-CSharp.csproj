@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Mark.cs" />
     <Compile Include="Assets\Scripts\Box.cs" />
+    <Compile Include="Assets\Scripts\Board.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
