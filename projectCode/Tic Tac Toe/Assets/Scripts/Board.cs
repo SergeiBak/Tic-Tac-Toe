@@ -56,8 +56,32 @@ public class Board : MonoBehaviour
 
             box.SetAsMarked(GetSprite(), currentMark, GetColor());
 
+            bool won = CheckIfWin();
+            if (won)
+            {
+                Debug.Log(currentMark.ToString() + " Wins.");
+
+                return;
+            }
+
             SwitchPlayer();
         }
+    }
+
+    private bool CheckIfWin()
+    {
+        return
+        AreBoxesMatched(0, 1, 2) || AreBoxesMatched(3, 4, 5) || AreBoxesMatched(6, 7, 8) ||
+        AreBoxesMatched(0, 3, 6) || AreBoxesMatched(1, 4, 7) || AreBoxesMatched(2, 5, 8) ||
+        AreBoxesMatched(0, 4, 8) || AreBoxesMatched(2, 4, 6);
+    }
+
+    private bool AreBoxesMatched(int i, int j, int k)
+    {
+        Mark m = currentMark;
+        bool matched = (marks[i] == m && marks[j] == m && marks[k] == m);
+
+        return matched;
     }
 
     private void SwitchPlayer()
