@@ -29,9 +29,13 @@ public class Board : MonoBehaviour
 
     private bool canPlay;
 
+    private LineRenderer lineRenderer;
+
     private void Start()
     {
         cam = Camera.main;
+        lineRenderer = GetComponent<LineRenderer>();
+        lineRenderer.enabled = false;
 
         currentMark = Mark.X;
 
@@ -95,7 +99,24 @@ public class Board : MonoBehaviour
         Mark m = currentMark;
         bool matched = (marks[i] == m && marks[j] == m && marks[k] == m);
 
+        if (matched)
+        {
+            DrawLine(i, k);
+        }
+
         return matched;
+    }
+
+    private void DrawLine(int i, int k)
+    {
+        lineRenderer.SetPosition(0, transform.GetChild(i).position);
+        lineRenderer.SetPosition(1, transform.GetChild(k).position);
+        Color color = GetColor();
+        color.a = .3f;
+        lineRenderer.startColor = color;
+        lineRenderer.endColor = color;
+
+        lineRenderer.enabled = true;
     }
 
     private void SwitchPlayer()
