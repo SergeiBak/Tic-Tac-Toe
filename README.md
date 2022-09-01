@@ -15,7 +15,7 @@ This project is a recreation of Tic Tac Toe, a game whose first print reference 
 In Tic Tac Toe, one player represents X, and the other represents O. Each player takes turns marking a empty spot on the 3x3 board until one wins by marking 3 boxes in a row with their symbol (Horizontally, vertically, or diagonally), or until the board is out of space resulting in a draw.     
 
 ## Test The Project!
-In order to play this version of Tic Tac Toe, follow the [link](https://sergeibak.github.io/PersonalWebsite/Asteroids.html) to a in-browser WebGL build (No download required!).
+In order to play this version of Tic Tac Toe, follow the [link](https://sergeibak.github.io/PersonalWebsite/TicTacToe.html) to a in-browser WebGL build (No download required!).
 
 ## Code
 A brief description of all of the classes is as follows:
