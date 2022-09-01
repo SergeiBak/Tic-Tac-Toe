@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Board : MonoBehaviour
 {
@@ -18,11 +19,15 @@ public class Board : MonoBehaviour
     [SerializeField] private Color colorX;
     [SerializeField] private Color colorO;
 
+    public UnityAction<Mark, Color> OnWinAction;
+
     public Mark[] marks;
 
     private Camera cam;
 
     private Mark currentMark;
+
+    private bool canPlay;
 
     private void Start()
     {
@@ -31,11 +36,13 @@ public class Board : MonoBehaviour
         currentMark = Mark.X;
 
         marks = new Mark[9];
+
+        canPlay = true;
     }
 
     private void Update()
     {
-        if (Input.GetMouseButtonUp(0))
+        if (canPlay && Input.GetMouseButtonUp(0))
         {
             Vector2 touchPosition = cam.ScreenToWorldPoint(Input.mousePosition);
 
@@ -59,7 +66,14 @@ public class Board : MonoBehaviour
             bool won = CheckIfWin();
             if (won)
             {
+                if (OnWinAction != null)
+                {
+                    OnWinAction.Invoke(currentMark, GetColor());
+                }
+
                 Debug.Log(currentMark.ToString() + " Wins.");
+
+                canPlay = false;
 
                 return;
             }
